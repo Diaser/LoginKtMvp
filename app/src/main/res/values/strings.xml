@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LoginKtMvp</string>
+    <string name="login_head">Logeate en esta App Kotlin</string>
+    <string name="hint_user">Ingresa tu usuario</string>
+    <string name="hint_password">Ingresa tu contraseña</string>
+    <string name="send">Enviar</string>
+    <string name="login_succes">Succesfull</string>
+    <string name="login_fail">Not Successfull</string>
+</resources>
