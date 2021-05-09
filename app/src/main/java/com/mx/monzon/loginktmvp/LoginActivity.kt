@@ -30,16 +30,16 @@ class LoginActivity : AppCompatActivity(), ILoginView {
         }catch (e: Exception){
             e.printStackTrace()
         }
-
-
     }
 
-    override fun onLoginResult(message: String) {
-        if(message.equals("Login Success")){
-            val intent = Intent(this,Dashboard::class.java)
-            intent.putExtra("USER", edtUser.text.toString())
-            startActivity(intent)
-        }else
-            Toasty.info(this, message, Toast.LENGTH_SHORT).show()
+    override fun onLoginResultOk() {
+        val intent = Intent(this, Dashboard::class.java)
+        intent.putExtra("USER", edtUser.text.toString())
+        startActivity(intent)
     }
+
+    override fun onLoginError(message: String) {
+        Toasty.info(this, message, Toast.LENGTH_SHORT).show()
+    }
+
 }
